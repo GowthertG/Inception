@@ -47,7 +47,7 @@ build:
 
 run:
 	@echo "Running Docker container ($(DOCKER_CONTAINER_NAME))..."
-	@$(DOCKER_COMMAND) run -d -p 8080:80 --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
+	@$(DOCKER_COMMAND) run -d -p 443:443 --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
 	@echo "$(GREEN)Docker container is running ($(DOCKER_CONTAINER_NAME)).$(RESET)"
 
 fclean: stopContainers cleanContainers cleanImages

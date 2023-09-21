@@ -1,4 +1,1 @@
- sudo docker stop nginx-container
- sudo docker rm nginx-container
- sudo docker build -t engin-x-test .
- sudo docker run -d -p 8080:80 --name nginx-container engin-x-test
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
