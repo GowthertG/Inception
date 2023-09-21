@@ -1,0 +1,5 @@
+FROM debian
+RUN apt update && apt upgrade -y
+RUN apt install nginx -y
+COPY index.html /usr/share/nginx/html
+CMD nginx -v && hostname && nginx -g 'daemon off;'
