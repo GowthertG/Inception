@@ -5,8 +5,8 @@ GREEN = \033[92m
 YELLOW = \033[93m
 
 DOCKER_COMMAND = docker
-DOCKER_IMAGE_NAME = engin-x-test
-DOCKER_CONTAINER_NAME = nginx-container
+DOCKER_IMAGE_NAME = mariadb-x-test
+DOCKER_CONTAINER_NAME = mariadb-container
 
 .PHONY: stopContainers cleanContainers cleanImages build run help
 
@@ -47,7 +47,7 @@ build:
 
 run:
 	@echo "Running Docker container ($(DOCKER_CONTAINER_NAME))..."
-	@$(DOCKER_COMMAND) run -d -p 443:443 --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
+	@$(DOCKER_COMMAND) run -d --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
 	@echo "$(GREEN)Docker container is running ($(DOCKER_CONTAINER_NAME)).$(RESET)"
 
 fclean: stopContainers cleanContainers cleanImages
