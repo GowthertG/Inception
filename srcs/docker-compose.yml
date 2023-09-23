@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mariadb:
+    container_name: mariadb
+    build: ./mariadb/
+    image: mariadb
+    # networks:
+      # - mynetwork
+    restart: on-failure
+  nginx:
+    container_name: nginx
+    build: ./nginx/
+    image: nginx
+    ports:
+      - 443:443
+    # networks:
+      # - mynetwork
+    restart: on-failure
+# networks:
+  # mynetwork:

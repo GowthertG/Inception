@@ -8,6 +8,7 @@ service mariadb start
 
 #waiting for mariadb to fully start
 sleep 1
+
 #creating a adata base
 mysql -u root -e  "CREATE DATABASE IF NOT EXISTS $DB_NAME;" 
 mysql -u root -e  "CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$DB_PASS';" 
