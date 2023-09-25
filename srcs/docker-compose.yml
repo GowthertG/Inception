@@ -4,18 +4,16 @@ services:
   mariadb:
     container_name: mariadb
     build: ./mariadb/
-    image: mariadb
-    # networks:
-      # - myNetwork
+    networks:
+      - mynetwork
     restart: on-failure
   nginx:
     container_name: nginx
     build: ./nginx/
-    image: nginx
     ports:
-      - 443:443
-    # networks:
-      # - myNetwork
+      - "443:443"
+    networks:
+      - mynetwork
     restart: on-failure
-# networks:
-  # myNetwork:
+networks:
+  mynetwork:
