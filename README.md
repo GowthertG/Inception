@@ -17,7 +17,6 @@ This repository contains the Inception project, which is part of the common core
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-- You need access to a virtual machine.
 - Basic knowledge of Docker is recommended.
 - Familiarity with Docker Compose is a plus.
 
@@ -25,13 +24,14 @@ Before you begin, ensure you have met the following requirements:
 
 To get started with the project, follow these steps:
 
-1. Clone this repository to your local machine.
-2. Set up a virtual machine environment.
-3. Review the project guidelines and requirements in the documentation.
+1. Clone this repository to your local machine..
+2. Review the project guidelines and requirements in the documentation.
 
 ## Usage
 
-The project involves creating and configuring Docker containers for services such as NGINX, WordPress, and MariaDB. The `docker-compose.yml` file and Makefile provided in the `srcs` folder will help you set up the infrastructure. Please refer to the documentation for detailed usage instructions.
+This project focuses on the creation and configuration of Docker containers for essential services including NGINX, WordPress, and MariaDB. To set up the infrastructure, you can leverage the provided `docker-compose.yml` file and Makefile located within the `srcs` directory.
+
+Please refer to the project's documentation for comprehensive instructions on how to use and configure these containers. Detailed usage guidelines will be provided as part of the project's documentation upon its completion.
 
 ## Project Structure
 
