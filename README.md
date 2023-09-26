@@ -1,10 +1,5 @@
 # Inception
 
-Keywords: containers, docker, maridb, ngnix, shell script, worpress
-Status: In Progress
-subject.pdf: Inception%2053cf3b5723e94f469bf9b55045b82dd5/en.subject.pdf
-my code: https://github.com/gowthertg/Inception
-
 # **What is Docker?**
 
 Docker is a platform and set of tools designed to make it easier to develop, deploy, and run applications in containers. Containers are lightweight, standalone, and executable packages that contain everything needed to run an application, including the code, runtime, libraries, and system tools. Docker has revolutionized the way software is developed and deployed by providing a consistent and efficient way to package and distribute applications across different environments.
