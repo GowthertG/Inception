@@ -18,7 +18,7 @@ This repository contains the Inception project, which is part of the common core
 
 Before you begin, ensure you have met the following requirements:
 - Basic knowledge of Docker is recommended.
-- Familiarity with Docker Compose is a plus.
+- Familiarity with Docker Compose.
 
 ## Getting Started
 
