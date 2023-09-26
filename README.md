@@ -2,15 +2,13 @@
 
 ## Table of Contents
 
-- **About**
-- **Prerequisites**
-- **Getting Started**
-- **Usage**
-- **Project Structure**
-- **Built With**
-- **Contributing**
-- **License**
-- **Acknowledgments**
+- [**About**](#about)
+- [**Prerequisites**](#prerequisites)
+- [**Getting Started**](#getting-started)
+- [**Usage**](#usage)
+- [**Project Structure**](#project-structure)
+- [**Built With**](#built-with)
+- [**Contributing**](#contributing)
 
 ## About
 
