@@ -1,17 +1,28 @@
 version: '3.8'
 
 services:
+  wordpress:
+    container_name: wordpress
+    build: ./srs/wordpress/
+    image: wordpress
+    depends_on:
+      - mariadb
+    networks:
+      - mynetwork
+    restart: on-failure
   mariadb:
     container_name: mariadb
-    build: ./mariadb/
+    build: ./srs/mariadb/
     networks:
       - mynetwork
     restart: on-failure
   nginx:
     container_name: nginx
-    build: ./nginx/
+    build: ./srs/nginx/
+    depends_on:
+      - wordpress
     ports:
-      - "443:443"
+      - 443:443
     networks:
       - mynetwork
     restart: on-failure

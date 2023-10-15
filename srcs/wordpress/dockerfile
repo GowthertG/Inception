@@ -2,10 +2,8 @@ FROM debian:bullseye
 
 RUN apt-get update -y
 
-RUN apt-get install -y
-
 COPY ./tools/wbSetup.sh .
 
 RUN   chmod +x wbSetup.sh
 
-CMD ["wbSetup.sh"]
+CMD ./wbSetup.sh

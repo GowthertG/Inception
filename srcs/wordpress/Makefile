@@ -47,7 +47,7 @@ build:
 
 run:
 	@echo "Running Docker container ($(DOCKER_CONTAINER_NAME))..."
-	@$(DOCKER_COMMAND) run -d --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
+	@$(DOCKER_COMMAND) run -d -p 2222:22 --name $(DOCKER_CONTAINER_NAME) $(DOCKER_IMAGE_NAME)
 	@echo "$(GREEN)Docker container is running ($(DOCKER_CONTAINER_NAME)).$(RESET)"
 
 fclean: stopContainers cleanContainers cleanImages
@@ -56,6 +56,10 @@ fclean: stopContainers cleanContainers cleanImages
 re : fclean build run
 	@echo "$(GREEN)Rebuild and run completed: Docker container is running.$(RESET)"
 
+attach :
+	@echo "$(GREEN)Attaching to Docker container ($(DOCKER_CONTAINER_NAME))...$(RESET)"
+	@$(DOCKER_COMMAND) exec -it $(DOCKER_CONTAINER_NAME) bash
+
 help:
 	@echo "$(BOLD)Available targets:$(RESET)"
 	@echo "  $(YELLOW)stopContainers$(RESET)   : Stop all Docker containers."
@@ -63,5 +67,6 @@ help:
 	@echo "  $(YELLOW)cleanImages$(RESET)      : Remove all Docker images."
 	@echo "  $(YELLOW)build$(RESET)            : Build a Docker image."
 	@echo "  $(YELLOW)run$(RESET)              : Run a Docker container."
+	@echo "  $(YELLOW)attach$(RESET)             : Attach to Docker conatiner."
 	@echo "  $(YELLOW)help$(RESET)             : Display this help message."
 
